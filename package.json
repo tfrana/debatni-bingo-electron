@@ -1,0 +1,23 @@
+{
+  "name": "debatni-bingo",
+  "productName": "Debatní bingo",
+  "version": "1.0.0",
+  "description": "Debatní bingo",
+  "main": "main.js",
+  "keywords": [
+    "volby",
+    "debata",
+    "bingo"
+  ],
+  "author": "Tomáš Frána",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^29.0.1",
+    "electron-builder": "^24.12.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0"
+  }
+}

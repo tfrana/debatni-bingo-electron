@@ -1,0 +1,55 @@
+body {
+  background-color: #F5F5DC;
+}
+
+h1 {
+  text-align:center;
+  color: darkblue;
+  font-weight: 1000;
+  font-family: sans-serif
+}
+
+table {
+  margin: auto;
+  width: fit-content;
+}
+
+td {
+  font-family: 'Courier New', Courier, monospace;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cross-out {
+  position: relative;
+}
+.cross-out:after {
+  content: "\274c";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(4);
+  display: none;
+}
+.cross-out.crossed-out:after {
+  display: block;
+}
+
+#btn-container{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#regenerateBtn{
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
