@@ -1,3 +1,5 @@
+"use strict";
+
 function getRandomQuote(arr) {
     var index = Math.floor(Math.random() * arr.length);
     var value = arr[index];
@@ -28,13 +30,15 @@ function generateTable() {
             }
         });
     }
-    document.getElementById("regenerateBtn").addEventListener("click", function(){
-        generateTable();
-        var cells = table.getElementsByTagName("td");
-        for(var i = 0; i < cells.length; i++) {
-            cells[i].classList.remove("crossed-out");
-        }
-    });
+
+    var cells = table.getElementsByTagName("td");
+    for(var i = 0; i < cells.length; i++) {
+        cells[i].classList.remove("crossed-out");
+    }
 }
+
+document.getElementById("regenerateBtn").addEventListener("click", function(){
+    generateTable();
+});
 
 generateTable();
