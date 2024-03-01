@@ -22,6 +22,15 @@ td {
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  display: inline-table;
+  margin-right: 1px;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .cross-out {

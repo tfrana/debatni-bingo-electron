@@ -7,6 +7,18 @@ function getRandomQuote(arr) {
     return value;
 }
 
+function resizeCells() {
+    var quotes = document.querySelectorAll('.quote');
+
+    quotes.forEach(quote => {
+        let fontSize = parseInt(getComputedStyle(quote).fontSize, 10);
+
+        while (parseFloat(getComputedStyle(quote.parentElement).width) > 100) {
+            quote.style.fontSize = fontSize-- + 'px';
+        }
+    });
+}
+
 function generateTable() {
     var quotes = [...window.api.quotes];
     var table = document.getElementById("table");
@@ -15,7 +27,10 @@ function generateTable() {
         var row = "<tr>";
         for (var j = 0; j < 5; j++) {
             var randomQuote = getRandomQuote(quotes);
-            row += "<td class='cross-out'>" + randomQuote + "</td>";
+            row += "<td class='cross-out'><div class='quote'>"
+                + randomQuote
+                + "</div></td>"
+            ;
         }
         row += "</tr>";
         table.innerHTML += row;
@@ -35,6 +50,8 @@ function generateTable() {
     for(var i = 0; i < cells.length; i++) {
         cells[i].classList.remove("crossed-out");
     }
+
+    resizeCells();
 }
 
 document.getElementById("regenerateBtn").addEventListener("click", function(){
